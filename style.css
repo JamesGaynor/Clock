@@ -37,9 +37,10 @@ img {
 }
 .hour-hand {
   position: absolute;
-  height: 120px;
+  height: 80px;
   width: 5px;
-  border-top: 120px solid black;
+  border-top: 80px solid black;
+  border-bottom: 80px;
 }
 .hide {
   display: none;

@@ -1,6 +1,8 @@
 // tt
 const hand = document.querySelector(".hand");
 const minutesHand = document.querySelector(".minute-hand");
+const hourHand = document.querySelector(".hour-hand");
+
 // set up interval of 1 second
 //increment a count value
 //change rotation of 90 degrees to 6
@@ -18,8 +20,11 @@ function setDate() {
   const secondsDegrees = (seconds / 60) * 360;
   hand.style.transform = `rotate(${secondsDegrees}deg)`;
   const mins = now.getMinutes();
-  const minsDegrees = (mins / 60) * 360 + 90;
+  const minsDegrees = (mins / 60) * 360;
   minutesHand.style.transform = `rotate(${minsDegrees}deg)`;
+  const hour = now.getHours();
+  const hourDegrees = (hour / 12) * 360;
+  hourHand.style.transform = `rotate(${hourDegrees}deg)`;
 }
 
 setInterval(setDate, 1000);
